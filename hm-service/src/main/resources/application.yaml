@@ -28,7 +28,6 @@ mybatis-plus:
 logging:
   level:
     com.hmall: debug
-    com.zaxxer.hikari: DEBUG
   pattern:
     dateformat: HH:mm:ss:SSS
   file:
