@@ -24,8 +24,6 @@ import java.util.List;
  * <p>
  *  前端控制器
  * </p>
- *
- * @author 虎哥
  */
 @RestController
 @RequestMapping("/addresses")
@@ -53,7 +51,7 @@ public class AddressController {
     public List<AddressDTO> findMyAddresses() {
         // 1.查询列表
         // System.out.println(UserContext.getUser());
-        List<Address> list = addressService.query().eq("user_id", 1L /*TODO UserContext.getUser()*/).list();
+        List<Address> list = addressService.query().eq("user_id", UserContext.getUser()).list();
         // 2.判空
         if (CollUtils.isEmpty(list)) {
             return CollUtils.emptyList();
