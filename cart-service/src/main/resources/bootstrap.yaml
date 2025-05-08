@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cart-service
+  profiles:
+    active: dev
+  cloud:
+    nacos:
+      discovery:
+        ip: 127.0.0.1
+        server-addr: 192.168.100.128:8848
+      config:
+        group: DEFAULT_GROUP
+        server-addr: 192.168.100.128:8848
+        file-extension: yaml
+        shared-configs:
+          - dataId: shared_jdbc.yaml
+          - dataId: shared_log.yaml
+          - dataId: shared_swagger.yaml
